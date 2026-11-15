@@ -9,3 +9,9 @@ redirects the root to `/archive/`.
 
 DNS: `visa.verslografija.lt` CNAME → `hackrsvalv.github.io`.
 Rollback: repoint that CNAME back to `custom-domains.buttondown.com`.
+
+`archive/<slug>/index.html` is one static page per post Buttondown published (sent or imported) while this
+domain was the archive. They answer 200 and redirect without JavaScript (meta refresh),
+so links in old emails reach the post even where scripts do not run or a 404 is shown
+as an error. JS keeps the query and #hash; meta refresh drops them. New posts link
+verslografija.lt directly, so this list does not need to grow.
